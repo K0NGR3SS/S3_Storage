@@ -26,7 +26,7 @@ class S3Storage:
     async def upload_file(
         self,
         file_path: str,
-        #This function can be changed to let user paste his own file, but in this case this function takes files locally from the file
+        #This function can be changed to let user paste his own file, but in this case this function takes materials locally from the file
 
     ):
         object_name = file_path.split('/')[-1]
