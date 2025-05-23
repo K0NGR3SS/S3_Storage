@@ -36,3 +36,12 @@ class S3Storage:
                     Key=object_name,
                     Body=file,
                 )
+
+async def main():
+        s3_client = S3Storage(
+            access_key="Whatever your access key token is",
+            secret_key="Whatever your secret key token is",
+            endpoint_url="https://s3.amazonaws.com or any other s3 storage service",
+        )
+
+        await s3_client.upload_file("Whatever_File_You_Upload") #You can use absolute path too
