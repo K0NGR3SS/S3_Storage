@@ -8,6 +8,7 @@ Features:
 - Context-managed S3 client for cleaner resource handling
 - Simple and flexible configuration
 - Custom 'endpoint_url support (not limited to AWS)
+- Fast, simple, and ready for automation or integration.
 
 Requirements:
 
