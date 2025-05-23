@@ -1,3 +1,4 @@
+import asyncio
 from contextlib import asynccontextmanager
 from aiobotocore.session import get_session
 
@@ -46,3 +47,6 @@ async def main():
 
         await s3_client.upload_file("Whatever_File_You_Upload")
         #You can use absolute path too
+
+if __name__ == "__main__":
+    asyncio.run(main())
