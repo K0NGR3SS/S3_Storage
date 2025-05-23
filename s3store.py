@@ -30,6 +30,7 @@ class S3Storage:
 
     ):
         object_name = file_path.split('/')[-1]
+        #Extracts just the file name from the full path to use as the S3 object key
         async with self.get_client() as client:
             with open(file_path, 'rb') as file:
                 await client.put_object(
@@ -46,7 +47,6 @@ async def main():
         )
 
         await s3_client.upload_file("Whatever_File_You_Upload")
-        #You can use absolute path too
 
 if __name__ == "__main__":
     asyncio.run(main())
